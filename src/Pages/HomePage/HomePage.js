@@ -37,9 +37,9 @@ class HomePage extends React.Component {
 		} else { curP = activeP[activeP.length - 1]; }
 
 		return [
-			{name: 'Homework', content: curH, navigation: "/homeworks"},
-			{name: 'Lab', content: curL, navigation: "/labs"},
-			{name: 'Project', content: curP, navigation: "/projects"},
+			{ name: 'Homework', content: curH, navigation: "/homeworks" },
+			{ name: 'Lab', content: curL, navigation: "/labs" },
+			{ name: 'Project', content: curP, navigation: "/projects" },
 		]
 	}
 
@@ -56,14 +56,14 @@ class HomePage extends React.Component {
 		const curA = this.getAssignments();
 		return (
 			<div className='home-due-soon-content'>
-				{curA.map(({name, content, navigation}) => {
+				{curA.map(({ name, content, navigation }) => {
 					return (
 						<div className="home-due-soon-section">
 							<div className="home-due-soon-label">
 								<p>{name}</p>
 								<Link to={navigation}>See all...</Link>
 							</div>
-							<AssignmentsCard number={content.number} title={content.title} active={content.active} dueDate={content.dueDate} links={content.links}/>
+							<AssignmentsCard number={content.number} title={content.title} active={content.active} dueDate={content.dueDate} links={content.links} />
 						</div>
 					)
 				})}
@@ -77,9 +77,9 @@ class HomePage extends React.Component {
 				<div className="home-wrapper">
 					<div className="home-left-wrapper">
 						<div className="home-intro-images">
-							<CIT_Illustration className="cit-illustration"/>
+							<CIT_Illustration className="cit-illustration" />
 							{/* <AnimatedImage images={[<CIT_Logo_1/>]}/> */}
-							<AnimatedImage/>
+							<AnimatedImage />
 						</div>
 						<div className="home-intro-text">
 							<h1>Welcome to CS17 :)</h1>
@@ -92,8 +92,8 @@ class HomePage extends React.Component {
 					</div>
 					<div className="home-announcement">
 						<div>
-							<div><FaExclamation/></div>
-							<p><mark>Announcement:</mark> Class will be held&nbsp;<a href="https://brown.zoom.us/j/96484496047">on Zoom</a>! Please use your Brown email address to join!</p>
+							<div><FaExclamation /></div>
+							<p><mark>Announcement:</mark> This is the website for Spring 2021, the Fall website will be here soon!</p>
 						</div>
 					</div>
 					<div className="home-due-soon">
@@ -101,7 +101,7 @@ class HomePage extends React.Component {
 						{this.renderDueSoonCards()}
 					</div>
 					<div className="home-hours">
-						<iframe title={"Google Calendar"} src="https://calendar.google.com/calendar/embed?src=brown.edu_fechjhecobm9ec4c23lp12nfuk%40group.calendar.google.com&ctz=America%2FNew_York" style={{border: 0}} frameborder="0" scrolling="no"></iframe>
+						<iframe title={"Google Calendar"} src="https://calendar.google.com/calendar/embed?src=brown.edu_fechjhecobm9ec4c23lp12nfuk%40group.calendar.google.com&ctz=America%2FNew_York" style={{ border: 0 }} frameborder="0" scrolling="no"></iframe>
 					</div>
 				</div>
 			</Page>
